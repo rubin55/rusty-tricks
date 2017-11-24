@@ -1,0 +1,10 @@
+[package]
+name = "rusty-tricks"
+version = "0.1.0"
+authors = ["Rubin Simons <rubin@raaf.tech>"]
+
+[dependencies]
+
+[[bin]]
+name = "rusty-tricks"
+path = "main.rs"
