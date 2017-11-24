@@ -7,4 +7,4 @@ authors = ["Rubin Simons <rubin@raaf.tech>"]
 
 [[bin]]
 name = "rusty-tricks"
-path = "main.rs"
+path = "src/main.rs"
