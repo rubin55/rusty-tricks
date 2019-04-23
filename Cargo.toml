@@ -2,9 +2,6 @@
 name = "rusty-tricks"
 version = "0.1.0"
 authors = ["Rubin Simons <rubin@raaf.tech>"]
+edition = "2018"
 
 [dependencies]
-
-[[bin]]
-name = "rusty-tricks"
-path = "src/main.rs"
