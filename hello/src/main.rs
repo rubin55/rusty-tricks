@@ -10,11 +10,6 @@ fn greet() {
     }
 }
 
-fn add(i: i32, j: i32) -> i32 {
-    i + j
-}
-
 fn main() {
     greet();
-    println!("10 + 15 = {}", add(10, 15))
 }
