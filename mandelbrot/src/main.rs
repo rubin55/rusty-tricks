@@ -8,7 +8,7 @@ fn calculate_mandelbrot(
     y_max: f64,
     width: usize,
     height: usize,
-)  -> Vec<Vec<usize>> {
+) -> Vec<Vec<usize>> {
 
     let mut rows: Vec<_> = Vec::with_capacity(width);
     for img_y in 0..height {
@@ -19,7 +19,6 @@ fn calculate_mandelbrot(
             let escaped_at = mandelbrot_at_point(cx, cy, max_iters);
             row.push(escaped_at);
         }
-
         rows.push(row)
     }
     rows
@@ -34,7 +33,7 @@ fn mandelbrot_at_point (
     let mut z = Complex { re: 0.0, im: 0.0 };
     let c = Complex::new(cx, cy);
 
-    for i in 0..max_iters {
+    for i in 0..=max_iters {
         if z.norm() > 2.0 {
             return i;
         }
@@ -46,8 +45,8 @@ fn mandelbrot_at_point (
 fn render_mandelbrot(escape_vals: Vec<Vec<usize>>) {
     for row in escape_vals {
         let mut line = String::with_capacity(row.len());
-        for col in row {
-            let val = match col {
+        for column in row {
+            let val = match column {
                 0..=2 => ' ',
                 3..=5 => '.',
                 6..=10 => '•',
@@ -61,12 +60,11 @@ fn render_mandelbrot(escape_vals: Vec<Vec<usize>>) {
 
             line.push(val);
         }
-
-        println!("{}", line)
+        println!("{}", line);
     }
 }
 
 fn main() {
-    let mandelbrot = calculate_mandelbrot(1000, 2.0, 1.0, -1.0, 1.0, 100, 24);
+    let mandelbrot = calculate_mandelbrot(1000, -2.0, 1.0, -1.0, 1.0, 80, 24);
     render_mandelbrot(mandelbrot);
 }
