@@ -1,3 +1,5 @@
+mod docs;
+
 use std::env;
 use std::error::Error;
 
