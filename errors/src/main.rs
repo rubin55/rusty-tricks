@@ -17,6 +17,8 @@ fn run_application() -> Result<(), Box<dyn Error>> {
 }
 
 fn main() {
+  let foo = docs::create_document("test");
+  println!("Foo: {:?}", foo);
   if let Err(e) = run_application() {
     panic!("An error happened: {}", e)
   }
