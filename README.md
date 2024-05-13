@@ -35,5 +35,7 @@ There are a few exceptions:
   * Use the `assert!`, `assert_eq!` and `assert_ne!` macros for tests and
     possibly, pre-conditions for functions (think design-by-contract)
   * `'static` means valid for the entire lifetime of the program
+  * `From` trait is for converting between types, called by `?` to convert
+    between error types
 
 In Rust, "no value" is represented as `()`, called "unit".
