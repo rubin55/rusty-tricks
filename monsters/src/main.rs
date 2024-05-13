@@ -29,5 +29,9 @@ impl Stats {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let mut _stats = Stats { hp: 20, sp: 12 };
+    let mut _friends = vec![Friend { loyalty: 4 }];
+    let mut _monster = Monster { stats: _stats, friends: _friends };
+    _monster.final_breath();
+    println!("Hello, monster!");
 }
