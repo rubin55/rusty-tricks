@@ -9,4 +9,3 @@ fn main() {
     println!("Integers: {}", add(52, 71));
     println!("Floats: {}", add(3.3, 4.6));
 }
-cursor
