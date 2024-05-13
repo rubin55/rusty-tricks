@@ -39,3 +39,9 @@ There are a few exceptions:
     between error types
 
 In Rust, "no value" is represented as `()`, called "unit".
+
+A "Concrete Lifetime" of a `value` is the time it is at *one* memory address. 
+It starts when it is created or moved into a location in memory, and it ends 
+when it is deleted or moved from that location. This is the same for `references`
+with an additional constraint: they must be contained within the referenced 
+value's lifetime.
