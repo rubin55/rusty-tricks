@@ -24,12 +24,15 @@ There are a few exceptions:
   * `String` is to `Vec<u8>` as `str` is to `[u8]`
   * Array notation: `[f32; 12]` is an array of 12 32-bit floating point values
   * `[u8; 3]` is a different type than `[u8; 4]` - the size of an array matters
-  * `Vec<Vec<(usize, String)>>` is a vector of vectors (e.g., `Vec<Vec<T>>`), 
-    where `T` is a pair of values of type `(usize, String)`. `(usize, String)` 
+  * `Vec<Vec<(usize, String)>>` is a vector of vectors (e.g., `Vec<Vec<T>>`),
+    where `T` is a pair of values of type `(usize, String)`. `(usize, String)`
     is a tuple
-  * `Vec<T>` performs best when you can provide it with a size hint via 
+  * `Vec<T>` performs best when you can provide it with a size hint via
     `Vec::with_ capacity()`
+  * Use the `panic!` macro when you need to crash immediately
+  * Use the `unreachable!` macro for a code block that should be unreachable
+  * Use the `unimplemented!` macro as a placeholder for not-yet implemented code
+  * Use the `assert!`, `assert_eq!` and `assert_ne!` macros for tests and
+    possibly, pre-conditions for functions (think design-by-contract)
 
 In Rust, "no value" is represented as `()`, called "unit".
-
-
