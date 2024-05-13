@@ -31,7 +31,19 @@ struct StatusRecord {
   created_at: Instant
 }
 
+fn add_five_to_last(n: &[i32]) -> Option<i32> {
+  let num = n.last()?;
+  Some(num + 5)
+}
+
+
 fn main() {
     let msg = save_status("Tumdidum");
     println!("{:?}", msg);
+
+    let non_empty_list = vec![1,2,3];
+    println!("add_five_to_last on non_empty_list: {:?}", add_five_to_last(&non_empty_list));
+
+    let empty_list: Vec<i32> = vec![];
+    println!("add_five_to_last on empty_list: {:?}", add_five_to_last(&empty_list));
 }
