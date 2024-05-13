@@ -34,5 +34,6 @@ There are a few exceptions:
   * Use the `unimplemented!` macro as a placeholder for not-yet implemented code
   * Use the `assert!`, `assert_eq!` and `assert_ne!` macros for tests and
     possibly, pre-conditions for functions (think design-by-contract)
+  * `'static` means valid for the entire lifetime of the program
 
 In Rust, "no value" is represented as `()`, called "unit".
