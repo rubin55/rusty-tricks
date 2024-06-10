@@ -3,10 +3,10 @@ fn greet() {
     let b = "Grüß Gott!";
     let c = "ハロー・ワールド";
 
-    let regions = [a, b ,c];
+    let regions = [a, b, c];
 
     for region in regions.iter() {
-            println!("{}", &region);
+        println!("{}", &region);
     }
 }
 
