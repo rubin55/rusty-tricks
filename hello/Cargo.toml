@@ -2,6 +2,9 @@
 name = "hello"
 version = "0.1.0"
 authors = ["Rubin Simons <me@rubin55.org>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
+
+[dev-dependencies]
+assert_cmd = "1"
