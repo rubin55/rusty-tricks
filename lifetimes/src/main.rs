@@ -1,4 +1,5 @@
-fn add_with_lifetimes<'a, 'b>(i: &'a i32, j: &'a i32) -> i32 {
+#[allow(clippy::needless_lifetimes)]
+fn add_with_lifetimes<'a, 'b>(i: &'a i32, j: &'b i32) -> i32 {
     *i + *j
 }
 

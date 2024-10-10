@@ -8,8 +8,8 @@ pub enum SessionState<M: Debug, P: Debug> {
 
 fn log_session_event<M: Debug, P: Debug>(state: &SessionState<M, P>) {
     let (docs, r#type) = match state {
-        SessionState::MissingAttributes(missing) => ("missing-docs", "missing-type"),
-        SessionState::ValidProposal(proposal) => ("proposal-docs", "proposal-type"),
+        SessionState::MissingAttributes(_missing) => ("missing-docs", "missing-type"),
+        SessionState::ValidProposal(_proposal) => ("proposal-docs", "proposal-type"),
     };
     println!("I got docs: {}, type: {}", docs, r#type);
 }
