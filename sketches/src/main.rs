@@ -1,9 +1,4 @@
 fn main() {
-    let n = 5;
-    let y = plus_one(n);
-    println!("The value of y is: {y}");
-}
-
-fn plus_one(x: i32) -> i32 {
-    x + 1
+    let a = Box::new([0; 1000000]);
+    let _b = a;
 }
