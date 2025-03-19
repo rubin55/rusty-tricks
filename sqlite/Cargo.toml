@@ -1,0 +1,10 @@
+[package]
+name = "sqlite"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sea-orm = { version = "^0.12.0", features = [ "sqlx-sqlite", "runtime-async-std-native-tls", "macros" ] }
+serde_json = { version = "^1.0.140", default-features = false }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+uuid = { version = "^1.12.1", features = [ "v7" ] }
