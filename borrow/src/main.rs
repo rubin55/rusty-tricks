@@ -3,7 +3,7 @@ struct Person {
 }
 
 fn congrats(p: &Person) {
-    println!("Contratulations, {}!!!", p.name)
+    println!("Congratulations, {}!!!", p.name)
 }
 
 fn main() {
